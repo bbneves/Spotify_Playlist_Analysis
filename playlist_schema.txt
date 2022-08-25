@@ -1,0 +1,36 @@
+Playlists
+-
+track_uri varchar PK FK - Features.track_uri
+playlist_name varchar
+followers int
+songs int
+genre_1 varchar
+genre_2 varchar
+playlist_uri varchar
+artist_name varchar
+song_name varchar
+popularity_score int
+
+Features
+-
+track_uri varchar PK 
+danceability float
+energy float
+key int
+loudness float
+mode int
+speechiness float
+acousticness float
+instrumentalness float
+liveness float
+valence float
+tempo float
+type str
+id varchar
+track_href varchar
+analysis_url varchar
+duration_ms int
+time_signature int
+artist_name varchar
+song_name varchar
+popularity_score int
