@@ -1,18 +1,34 @@
 # Spotify_Playlist_Analysis
 
-Draft of project must include following information: 
+![Spotify logo](https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png)
 
-## Selected topic 
-For this project, our team decided to perform analysis on a live dataset containing song data from popular Spotify playlists. We used Spotify's API to retrieve data from popular playlists and the songs each of them contain, and then used a supervised learning model to see if we could predict popularity of a song given certain features.
+## Selected Topic 
+For this project, our team decided to perform analysis on the audio features of songs from some of the most popular Spotify playlists. We used Spotify's API to retrieve data upt 100 songs per playlist selected, and then used a supervised learning model to predict the popularity score of a song given certain its audio features.
 
-## Reason why they selected their topic 
-Our team members, Bruno Blaszcyzk Nieves, Frank Bucalo, Hunter Gierhart, and Tyler Comerford, have a shared interest in music. In the current landscape of the music industry, the rise in popularity of streaming services as a platform to consume music has made data analysis an extremely useful tool for companies involved in the music industry. Nowadays, artists and record labels have access to an incredible amount of data and can use data analyis as a tool to reach audiences that they might not have been able to reach before and expand their following and fanbase in the process.
+## Topic Selection Process
+Our team members, Bruno Blaszcyzk Nieves, Frank Bucalo, Hunter Gierhart, and Tyler Comerford, have a shared interest in music. The rise in popularity of streaming services as a means to consume music has provided companies in the industry with a plethora of new, valuable metrics to analyze. Nowadays, record labels and artists alike have access to more data than ever before, and can use data analyis as a tool to target audiences that they might not have been able to reach before, and expand their following and fanbase in the process.
 
-## Description of their source of data 
-We scraped together the database that we used for this project ourselves using Spotify's API. Our finalized dataset is in the form of a csv file that contains several key metrics for each song. Metrics in our dataframe included 'danceability', 'energy', 'key', 'loudness', and 'popularity', among others. These metrics are assigned to each song by Spotify we assume using algorithms developed by Spotify, although we cannot be certain how these metrics are assigned as Spotify does not make this process public.
+Record labels and artists have a vested interest in obtaining favorable playlisting from Spotify curators - a task that is easier said than done. By analyzing audio features for songs by playlist, our group hopes to uncover useful trends for content creators and owners to utilize when pitching their music for editorial placement.
 
-## Questions they hope to answer with the data 
-Our target variable in our machine learning model is 'popularity.' Essentially, we want an artist to be able to predict the popularity of a song from their catalog based off of the metrics contained in our dataset. Ideally, an artist could plug the metrics of their song into our model and would in return receive a predicted popularity score that would tell them how likely it is that their song would become popular on Spotify.
+## Description of source of data 
+We scraped together the database that we used for this project ourselves using Spotify's API. Our finalized dataset is in the form of a csv file that contains several key metrics for each song. Metrics in our dataframe included 'danceability', 'energy', 'key', 'loudness', and 'popularity', among others. These metrics are assigned to each song by Spotify using algorithms that they've develope. While this data itself is public, details on the algorithm and the processes of generating these scores are not.
 
-## Description of the communication protocols
-Our team communicated mainly via Slack and occasionally via Zoom meetings.
+### Playlist Selection Criteria
+
+We chose 100 editorial Spotify playlists of the most popular musical genres based on the following criteria:
+
+* 100,000+ follower playlists only
+* No regional playlists (“Hot Hits Brazil,” “New Music Friday Germany," etc)
+* Playlists for frontline releases only (no, catalog releases, i.e., “80s classic hits” or “Best of The 90s”)
+* No artist-specific playlists (ex. "This Is Katy Perry")
+* Ideally genre playlists (Ex. “Indie Pop,” “Sludge Rock” etc)
+* No “New Music Friday” type playlists that are different every week (every playlist should have generally consistent audio features from week to week)
+* No chart playlists (ex. “Top Songs Global,” “Viral Hits”)
+* Editorial Playlists only (Official Spotify playlists only)
+
+## Questions to answer with the data 
+Our target variable in our machine learning model is 'popularity.' Theoretically, we want an artist to be able to predict the popularity of a song from their catalog based off of the audio features generated by Spotify. Ideally, an artist could plug the metrics of their song into our model and would in return receive a predicted popularity score that would tell them how likely it is that their song would become popular on Spotify.
+
+## Communication protocols
+Our team communicated mainly via Slack and twice a week via Zoom meetings.
+
