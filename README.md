@@ -3,7 +3,7 @@
 ![Spotify logo](https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png)
 
 ## Selected Topic 
-For this project, our team decided to perform analysis on the audio features of songs from some of the most popular Spotify playlists. We used Spotify's API to retrieve data upt 100 songs per playlist selected, and then used a supervised learning model to predict the popularity score of a song given certain its audio features.
+For this project, our team decided to perform analysis on the audio features of songs from some of the most popular Spotify playlists. We used Spotify's API to retrieve data up to 100 songs per playlist selected, and then used a supervised learning model to predict the popularity score of a song given certain its audio features.
 
 ## Topic Selection Process
 Our team members, **Bruno Blaszcyzk Nieves**, **Frank Bucalo**, **Hunter Gierhart**, and **Tyler Comerford,** have a shared interest in music, with Hunter working at a record label. The rise in popularity of streaming services as a means to consume music has provided a plethora of new, valuable metrics to analyze, for companies, artists, and enthusiasts like us. Analysis on this data can be used as a tool to target audiences, improve reach, and uncover trends on a mass scale.
