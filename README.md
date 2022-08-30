@@ -11,7 +11,7 @@ Our team members, **Bruno Blaszcyzk Nieves**, **Frank Bucalo**, **Hunter Gierhar
 Our project centers around DSP playlisting: record labels and artists have a vested interest in obtaining favorable playlisting from Spotify curators - a task that is easier said than done. By analyzing audio features for songs by playlist, our group hopes to uncover useful trends for content creators and owners to utilize when pitching their music for editorial placement. As the largest DSP, Spotify is the most important player in recorded music today. Their API makes more data available to the public than ever before, and is the perfect tool for music related data analysis.
 
 ## Description of source of data 
-We scraped together the database that we used for this project ourselves using Spotify's API. Our finalized dataset is in the form of a csv file that contains several key metrics for each song. Metrics in our dataframe included 'danceability', 'energy', 'key', 'loudness', and 'popularity', among others. These metrics are assigned to each song by Spotify using algorithms that they've develope. While this data itself is public, details on the algorithm and the processes of generating these scores are not.
+We scraped together the database that we used for this project ourselves using Spotify's API. Our finalized dataset is in the form of a csv file that contains several key metrics for each song. Metrics in our dataframe included 'danceability', 'energy', 'key', 'loudness', and 'popularity', among others. These metrics are assigned to each song by Spotify using algorithms that they've developed. While this data itself is public, details on the algorithm and the processes of generating these scores are not.
 
 ### Playlist Selection Criteria
 
