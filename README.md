@@ -70,3 +70,6 @@ The dataframes were exported as CSV files and then imported to PGAdmin where the
 ## Machine Learning
 To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the other metrics in our data set that we collected from Spotify using their API. Below we've included a snippet of the code that we created to perform linear regression:
 
+
+
+As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forrest classifier and linear regression to attempt to predict the popularity score of songs based on the other metrics in our data.
