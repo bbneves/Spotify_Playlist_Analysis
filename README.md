@@ -74,7 +74,7 @@ Our initial data analysis consisted of visualizations and analyzing the audio fe
 ![Matrix](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/scatter_matrix.PNG)
 
 ## Database
-Our data while initially stored in two CSV files, were imported into two tables in PGAdmin using Python, and joined by SQL script. That work is included in file 03, Add to SQL Database. This data is then called upon in file 04, our Machine Learning script.
+Our data while initially stored in two CSV files, were imported into two tables in PGAdmin using psycopg2 in Python; that work is included in file 03, Add to SQL Database. These tables were then joined into one in file 04, our Machine Learning script.
 
 ![ERD](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/frank/playlist_ERD.png)
 
@@ -93,4 +93,6 @@ Based on these results, we removed the audio features 'Mode' (major or minor key
 Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
 
 ## Dashboard
+Our data will be visualized in an interactive Tableau dashboard that will highlight features on hover.
 
+![Tableau](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/Tableau_Speechiness_x_Popularity.png)
