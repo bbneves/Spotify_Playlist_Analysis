@@ -73,7 +73,24 @@ Our initial data analysis consisted of visualizations and analyzing the audio fe
 
 ![Matrix](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/scatter_matrix.PNG)
 
-## Machine Learning
-To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the other metrics in our data set that we collected from Spotify using their API. 
+## Database
+Our data while initially stored in two CSV files, were imported into two tables in PGAdmin using Python, and joined by SQL script. That work is included in file 03, Add to SQL Database. This data is then called upon in file 04, our Machine Learning script.
 
-As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forest classifier and linear regression to attempt to predict the popularity score of songs based on the other metrics in our data.
+![ERD]
+
+## Machine Learning
+### Data Pre-Processing
+To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model.
+
+### Data Feature Engineering
+We removed columns with names (track_uri, title, artist, etc.), and genres were encoded. For determining feature importance, we used the correlation matrix from the Data Analysis phase to identify the most useful audio features for predicting popularity, and also looked at the distribution of popularity for each audio feature as shown below:
+
+![Popularity_Distribution]
+
+Our dataset was split into training and testing sets with a standard 75/25 split.
+
+### Model Choice
+Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
+
+## Dashboard
+
