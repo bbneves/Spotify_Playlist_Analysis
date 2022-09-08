@@ -87,7 +87,7 @@ We removed columns with names (track_uri, title, artist, etc.), and genres were 
 
 ![Popularity_Distribution](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/Undestanding_data.png)
 
-Based on these results, we removed the audio features 'Mode' (major or minor key), 'Key' (signature), Our dataset was split into training and testing sets with a standard 75/25 split.
+Based on these results, we removed the audio features 'Mode' (major or minor key), 'Key' (signature), 'Time Signature,' and 'Tempo.' Our dataset was then split into training and testing sets with a standard 75/25 split.
 
 ### Model Choice
 Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
