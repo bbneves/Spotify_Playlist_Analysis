@@ -90,11 +90,11 @@ We removed columns with names (track_uri, title, artist, etc.), and genres were 
 Based on these results, we removed the audio features 'Mode' (major or minor key), 'Key' (signature), 'Time Signature,' and 'Tempo.' Our dataset was then split into training and testing sets with a standard 75/25 split.
 
 ### Model Choice
-Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
+Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
 
-The neural network has delivered the best results so far, suprassing linear regression. The neural network model is more robust than linear regression, but ultimately, our model will **never** have all of the information to predict popularity. There are so many factors beyond a song's composition that effect its streaming popularity, from movie and tv placements, radio play, promotional budgets, and artist publicity, that aren't represented in our dataset.
+The neural network has delivered the best results so far, surpassing linear regression. The neural network model is more robust than linear regression, but ultimately, our model will **never** have data on all of the factors that impact popularity. There are so many factors beyond a song's composition that affect its streaming popularity, from movie and tv placements, radioplay, promotional budgets, and artist publicity, that aren't represented in our dataset.
 
-Another technical limitation of our data is that the popularity score is not static, it is an ever changing metric. A new Harry Styles or Lizzo song may have a '0' popularity score upon release and be input in our data as such, but soar later on. Vice-versa, a song could plummet in popularity after peaking. These considerations are to say that evaluation of our model's accuracy should account foe these realities.
+Another technical limitation of our data is that the popularity score is not static, it is an ever changing metric. A new Harry Styles or Lizzo song may have a '0' popularity score upon release and be input in our data as such, but soar later on. Vice-versa, a song could plummet in popularity after peaking. These considerations are to say that evaluation of our model's accuracy should account for these realities.
 
 ## Dashboard
 Our data will be visualized in an interactive Tableau dashboard that will highlight features on hover.
