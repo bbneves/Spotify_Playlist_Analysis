@@ -76,7 +76,7 @@ Our initial data analysis consisted of visualizations and analyzing the audio fe
 ## Database
 Our data while initially stored in two CSV files, were imported into two tables in PGAdmin using Python, and joined by SQL script. That work is included in file 03, Add to SQL Database. This data is then called upon in file 04, our Machine Learning script.
 
-![ERD]
+![ERD](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/frank/playlist_ERD.png)
 
 ## Machine Learning
 ### Data Pre-Processing
@@ -85,9 +85,9 @@ To begin the machine learning aspect of our anaylsis, our group set out to creat
 ### Data Feature Engineering
 We removed columns with names (track_uri, title, artist, etc.), and genres were encoded. For determining feature importance, we used the correlation matrix from the Data Analysis phase to identify the most useful audio features for predicting popularity, and also looked at the distribution of popularity for each audio feature as shown below:
 
-![Popularity_Distribution]
+![Popularity_Distribution](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/Undestanding_data.png)
 
-Our dataset was split into training and testing sets with a standard 75/25 split.
+Based on these results, we removed the audio features 'Mode' (major or minor key), 'Key' (signature), Our dataset was split into training and testing sets with a standard 75/25 split.
 
 ### Model Choice
 Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our analysis, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
