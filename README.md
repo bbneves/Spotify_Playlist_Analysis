@@ -88,16 +88,20 @@ Our data while initially stored in two CSV files, were imported into two tables 
 To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model.
 
 ### Data Feature Engineering
-We removed columns with names (track_uri, title, artist, etc.), and genres were encoded. For determining feature importance, we used the correlation matrix from the Data Analysis phase to identify the most useful audio features for predicting popularity, and also looked at the distribution of popularity for each audio feature as shown below:
+We removed columns with names (track_uri, title, artist, etc.), and genres were encoded. Duplicate songs - the same song in multiple playlists - were dropped for this portion of the analysis. To determine feature importance, we used the correlation matrix from the Data Analysis phase to identify the most useful audio features for predicting popularity, and also looked at the distribution of popularity for each audio feature as shown below:
 
 ![Popularity_Distribution](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/Undestanding_data.png)
 
-Based on these results, we removed the audio features `Mode` (major or minor key), `Key` (signature), `Time Signature,` and `Tempo.` Our dataset was then split into training and testing sets with a standard 75/25 split.
+Based on these results, we removed the audio features `Mode` (major or minor key), `Key` (signature), `Time Signature,` and `Tempo.` Our dataset was then split into training and testing sets with a standard 75/25 split, and scaled.
 
-### Model Choice
-Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other linear regression models to improve accuracy.
+### Model Choice & Results
+Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other linear regression models to test and improve accuracy.
 
-The neural network has delivered the best results so far, surpassing linear regression. The neural network model is more robust than linear regression, but ultimately, our model will **never** have data on all of the factors that impact popularity. There are so many factors beyond a song's composition that affect its streaming popularity, from movie and tv placements, radioplay, promotional budgets, and artist publicity, that aren't represented in our dataset.
+The neural network with 42 neurons to analyze out 18 features has delivered the best results so far, with an accuracy of .8145, surpassing our linear regression models. We plan to perform additional tests of this model using additional datasets to mitigate potential bias in the one we scraped.
+
+![accuracy_score](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/neural_accuracy.png)
+
+While the neural network model is more robust than linear regression, ultimately, our model will **never** have data on all of the factors that impact popularity. There are so many factors beyond a song's composition that affect its streaming popularity, from movie and tv placements, radioplay, promotional budgets, and artist publicity, that aren't represented in our dataset.
 
 Another technical limitation of our data is that the popularity score is not static, it is an ever changing metric. A new Harry Styles or Lizzo song may have a '0' popularity score upon release and be input in our data as such, but soar later on. Vice-versa, a song could plummet in popularity after peaking. These considerations are to say that evaluation of our model's accuracy should account for these realities.
 
