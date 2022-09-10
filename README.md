@@ -81,7 +81,7 @@ Our initial data analysis consisted of visualizations and analyzing the audio fe
 ## Database
 Our data while initially stored in two CSV files, were imported into two tables in PGAdmin using psycopg2 in Python; that work is included in file `03-add_to_SQL_Database.ipynb`. These tables were then joined into one in file `04_machine_learning.ipynb`, our Machine Learning script.
 
-![ERD](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/frank/playlist_ERD.png)
+![ERD](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/frank/ERD.png)
 
 ## Machine Learning
 ### Data Pre-Processing
