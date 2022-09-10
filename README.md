@@ -17,6 +17,11 @@ Our project centers around DSP (digital service provider) playlisting: record la
 ## Description of data source
 We scraped together the dataset that we used for this project ourselves using Spotify's API. Our finalized dataset is in the form of csv files joined in PGAdmin that contain several key metrics for each song. Metrics in our dataframe included 'danceability', 'energy', 'key', 'loudness', and 'popularity', among others. These metrics are assigned to each song by Spotify using algorithms that they've developed. While this data itself is public, details on the algorithm and the processes of generating these scores are not.
 
+## Technologies & Requirements
+* Languages: Python 3.7, SQL
+* Packages (Python): Pandas, Spotipy 2.20, sklearn, tensorflow, matplotlib, psycopg2, numpy, datetime, sqlalchemy, time
+* Software: PGAdmin 11, Jupyter Notebook
+
 ### Playlist Selection Criteria
 
 We chose 100 editorial Spotify playlists of the most popular musical genres based on the following criteria:
