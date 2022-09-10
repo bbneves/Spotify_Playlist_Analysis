@@ -97,7 +97,7 @@ Based on these results, we removed the audio features `Mode` (major or minor key
 ### Model Choice & Results
 Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other linear regression models to test and improve accuracy.
 
-The neural network with 42 neurons to analyze out 18 features has delivered the best results so far, with an accuracy of .8145, surpassing our linear regression models. We plan to perform additional tests of this model using additional datasets to mitigate potential bias in the one we scraped.
+The neural network with 42 neurons to analyze our 18 features has delivered the best results so far, with an accuracy of .8145, surpassing our linear regression models. We plan to perform additional tests of this model using additional datasets to mitigate potential bias in the one we scraped.
 
 ![accuracy_score](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/neural_accuracy.png)
 
