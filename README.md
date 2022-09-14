@@ -89,6 +89,9 @@ Our data while initially stored in two CSV files, were imported into two tables 
 ### Data Pre-Processing
 To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model.
 
+*UPDATE*: By evaluating the popularity in the dataset, we increased the popularity threshold to 66. This score reflects the 3rd percentile division of the dataset. 
+          In order to explore more possibilities, we attempted the use of Deep Learning (More information on it below)
+
 ### Data Feature Engineering
 We removed columns with names (track_uri, title, artist, etc.), and genres were encoded. Duplicate songs - the same song in multiple playlists - were dropped for this portion of the analysis. To determine feature importance, we used the correlation matrix from the Data Analysis phase to identify the most useful audio features for predicting popularity, and also looked at the distribution of popularity for each audio feature as shown below:
 
@@ -102,6 +105,14 @@ Thus far, we have used linear regression and neural network models for predictin
 The neural network with 42 neurons to analyze our 18 features has delivered the best results so far, with an accuracy of .8145, surpassing our linear regression models. We plan to perform additional tests of this model using additional datasets to mitigate potential bias in the one we scraped.
 
 ![accuracy_score](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/neural_accuracy.png)
+
+*UPDATE*: 
+          - The number of neurons were decided to be 3 times the amount of features available, split into 2 times the features in the first layer and the second player having the same amount of neurons as features.
+          - Evaluating the first results of .8145 accuracy, we believe there it could have some overfitting.
+          - Changing the popular selection score to 66, we ran the same structure for the training. Our accuracy got down to .7553.
+
+Activation function (AF), Loss algorithm, and optimizer choice. For the AF, the first layer with the most amount of neurons got Tanh because
+        
 
 While the neural network model is more robust than linear regression, ultimately, our model will **never** have data on all of the factors that impact popularity. There are so many factors beyond a song's composition that affect its streaming popularity, from movie and tv placements, radioplay, promotional budgets, and artist publicity, that aren't represented in our dataset.
 
