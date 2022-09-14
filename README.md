@@ -6,6 +6,8 @@
 
 [Google Slide Presentation (Draft)](https://docs.google.com/presentation/d/1ixixDgI3AXCSs7oHHZay8Znu-JMH7h9iGQ141RH3gZw/edit#slide=id.p)
 
+[Tableau Dashboard](https://public.tableau.com/views/Radar-Chart_16627764994540/SpotifyPlaylistAnalysis?:language=en-US&:display_count=n&:origin=viz_share_link)
+
 ## Selected Topic 
 For this project, our team decided to perform analysis on the audio features of songs from some of the most popular Spotify playlists. We used Spotify's API to retrieve data on up to 100 songs per playlist selected, and then used a supervised learning model to predict the popularity score of a song given its audio features.
 
@@ -108,4 +110,4 @@ Another technical limitation of our data is that the popularity score is not sta
 ## Dashboard
 Our data will be visualized in an interactive Tableau dashboard that will highlight features on hover.
 
-![Tableau](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/Tableau_Speechiness_x_Popularity.png)
+![Tableau](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/Spotify_Analysis_Dashboard.png)
