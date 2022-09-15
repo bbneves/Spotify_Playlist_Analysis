@@ -87,13 +87,7 @@ Our data while initially stored in two CSV files, were imported into two tables 
 
 ## Machine Learning
 ### Data Pre-Processing
-To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 6 or above were given a '1' score, which represents the popular group. Songs with a score below 6 were given a '0' score, which represents the unpopular group. We then used both a Logistic Regression model and a nonlinear SVM Classification model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model. <br><br>
-The features we used to train the models were those we found as most correlated with popularity and/or most correlated with each other.<br>
-This included danceability, energy, loudness, valence, instrumentalness and acousticness.<br><br>
-The Linear Regression model is often a great starting point when working with a dichotomous dependent variable so we chose to start there. <br>
-The accuracy score for our Logistic Regression model was 0.768<br>
-The SVM Classification model maps samples onto a high-dimensional feature space to make linear classification more possible. Our model in particular used a polynomial kernel.<br>
-The accuracy score for SVM Classification model was 0.748<br>
+To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model. <br><br>
 
 *UPDATE*: By evaluating the popularity in the dataset, we increased the popularity threshold to 66. This score reflects the 3rd percentile division of the dataset. 
           In order to explore more possibilities, we attempted the use of Deep Learning (More information on it below)
@@ -107,7 +101,17 @@ We removed columns with names (track_uri, title, artist, etc.), and genres were 
 Based on these results, we removed the audio features `Mode` (major or minor key), `Key` (signature), `Time Signature,` and `Tempo.` Our dataset was then split into training and testing sets with a standard 75/25 split, and scaled.
 
 ### Model Choice & Results
-Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other linear regression models to test and improve accuracy.
+The features we used to train the models were those we found as most correlated with popularity and/or most correlated with each other.<br>
+This included danceability, energy, loudness, valence, instrumentalness and acousticness.<br><br>
+
+Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other regression models to test and improve accuracy.
+
+The Linear Regression model is often a great starting point when working with a dichotomous dependent variable so we chose to start there. <br>
+The accuracy score for our Logistic Regression model was 0.768<br>
+
+As our data did not prove to have many linear relationships we moved to a nonlinear SVM classification model.<br>
+The SVM classification model maps samples onto a high-dimensional feature space to make linear classification more possible. Our model in particular used a polynomial kernel.<br>
+The accuracy score for SVM classification model was 0.748<br><br>
 
 The neural network with 42 neurons to analyze our 18 features has delivered the best results so far, with an accuracy of .8145, surpassing our linear regression models. We plan to perform additional tests of this model using additional datasets to mitigate potential bias in the one we scraped.
 
