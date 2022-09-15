@@ -78,7 +78,7 @@ Our initial data analysis consisted of visualizations and analyzing the audio fe
 
 ![Correlation](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/corr.PNG)
 
-![Matrix](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/scatter_matrix.PNG)
+![pair_grid](https://user-images.githubusercontent.com/15967377/190285086-c805d236-b088-4c28-9505-9bb7326fca89.PNG)
 
 ## Database
 Our data while initially stored in two CSV files, were imported into two tables in PGAdmin using psycopg2 in Python; that work is included in file `03-add_to_SQL_Database.ipynb`. These tables were then joined into one in file `04_machine_learning.ipynb`, our Machine Learning script.
@@ -87,7 +87,13 @@ Our data while initially stored in two CSV files, were imported into two tables 
 
 ## Machine Learning
 ### Data Pre-Processing
-To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 60 or above were given a '1' score, which represents the popular group. Songs with a score below 60 were given a '0' score, which represents the unpopular group. We then used a Logistic Regression model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model.
+To begin the machine learning aspect of our anaylsis, our group set out to create a Logistic Regression model that would predict whether or not a given song would be popular. To do this, we split the data into binary groups based on the song's popularity score that we scraped from the Spotify API. Songs with a score of 6 or above were given a '1' score, which represents the popular group. Songs with a score below 6 were given a '0' score, which represents the unpopular group. We then used both a Logistic Regression model and a nonlinear SVM Classification model to predict whether a song would be popular or unpopular based on the audio features metrics, before moving onto a neural network model. <br><br>
+The features we used to train the models were those we found as most correlated with popularity and/or most correlated with each other.<br>
+This included danceability, energy, loudness, valence, instrumentalness and acousticness.<br><br>
+The Linear Regression model is often a great starting point when working with a dichotomous dependent variable so we chose to start there. <br>
+The accuracy score for our Logistic Regression model was 0.768<br>
+The SVM Classification model maps samples onto a high-dimensional feature space to make linear classification more possible. Our model in particular used a polynomial kernel.<br>
+The accuracy score for SVM Classification model was 0.748<br>
 
 *UPDATE*: By evaluating the popularity in the dataset, we increased the popularity threshold to 66. This score reflects the 3rd percentile division of the dataset. 
           In order to explore more possibilities, we attempted the use of Deep Learning (More information on it below)
@@ -95,7 +101,8 @@ To begin the machine learning aspect of our anaylsis, our group set out to creat
 ### Data Feature Engineering
 We removed columns with names (track_uri, title, artist, etc.), and genres were encoded. Duplicate songs - the same song in multiple playlists - were dropped for this portion of the analysis. To determine feature importance, we used the correlation matrix from the Data Analysis phase to identify the most useful audio features for predicting popularity, and also looked at the distribution of popularity for each audio feature as shown below:
 
-![Popularity_Distribution](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/main/Images/Undestanding_data.png)
+![popularity_distribution](https://user-images.githubusercontent.com/15967377/190285151-4a61d5b1-2d7f-4193-8130-20775849dbb2.PNG)
+
 
 Based on these results, we removed the audio features `Mode` (major or minor key), `Key` (signature), `Time Signature,` and `Tempo.` Our dataset was then split into training and testing sets with a standard 75/25 split, and scaled.
 
