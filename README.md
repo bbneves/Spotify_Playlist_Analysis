@@ -118,11 +118,13 @@ The neural network with 42 neurons to analyze our 18 features has delivered the 
 ![accuracy_score](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/neural_accuracy.png)
 
 *UPDATE*: 
-          - The number of neurons were decided to be 3 times the amount of features available, split into 2 times the features in the first layer and the second player having the same amount of neurons as features.
-          - Evaluating the first results of .8145 accuracy, we believe there it could have some overfitting.
-          - Changing the popular selection score to 66, we ran the same structure for the training. Our accuracy got down to .7553.
+          
+          * The number of neurons were decided to be 3 times the amount of features available, 
+          split into 2 times the features in the first layer and the second player having the same amount of neurons as features.
+          * Evaluating the first results of .8145 accuracy, we believe there it could have some overfitting.
+          * Changing the popular selection score to 66, we ran the same structure for the training. Our accuracy got down to .7553.
 
-Activation function (AF), Loss algorithm, and optimizer choice. For the AF, the first layer with the most amount of neurons got Tanh because
+Activation function (AF), Loss algorithm, and optimizer choice. For the AF, the first layer with the most amount of neurons got Tanh because the dataset contains some negative variables that would've been neglected by Relu. Then, the second layer has LeakyRelu because it considers some negativity to the data. Finally, to the last layer, sigmoid was selected. Binary Crossentropy was chosen for the loss algorithm as the results are binary and it compares each of the predicted probabilities to actual class output which can be either 0 or 1. Adam optimization is stochastic gradient descent method that is based on adaptive estimation of first order and second-order moments.
         
 
 While the neural network model is more robust than linear regression, ultimately, our model will **never** have data on all of the factors that impact popularity. There are so many factors beyond a song's composition that affect its streaming popularity, from movie and tv placements, radioplay, promotional budgets, and artist publicity, that aren't represented in our dataset.
