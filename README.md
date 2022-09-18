@@ -104,9 +104,9 @@ Based on these results, we removed the audio features `Mode` (major or minor key
 The features we used to train the models were those we found as most correlated with popularity and/or most correlated with each other.<br>
 This included danceability, energy, loudness, valence, instrumentalness and acousticness.<br><br>
 
-Thus far, we have used linear regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other regression models to test and improve accuracy.
+Thus far, we have used logistic regression and neural network models for predicting popularity, with the latter being most successful. As we move further into the machine learning portion of our project, we also plan on exploring the data using a Random Forest classifier and other regression models to test and improve accuracy.
 
-The Linear Regression model is often a great starting point when working with a dichotomous dependent variable so we chose to start there. <br>
+The Logistic Regression model is often a great starting point when working with a dichotomous dependent variable so we chose to start there. <br>
 The accuracy score for our Logistic Regression model was 0.768<br>
 
 As our data did not prove to have many linear relationships we moved to a nonlinear SVM classification model.<br>
