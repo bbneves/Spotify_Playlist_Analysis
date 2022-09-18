@@ -12,7 +12,7 @@
 For this project, our team decided to perform analysis on the audio features of songs from some of the most popular Spotify playlists. We used Spotify's API to retrieve data on up to 100 songs per playlist selected, and then used a supervised learning model to predict the popularity score of a song given its audio features.
 
 ## Topic Selection Process
-Our team members, **Bruno Blaszczyk Neves**, **Frank Bucalo**, **Hunter Gierhart**, and **Tyler Comerford,** have a shared interest in music, with Hunter working at a record label. The rise in popularity of streaming services as a means to consume music has provided a plethora of new, valuable metrics to analyze, for companies, artists, and enthusiasts like us. Analysis on this data can be used as a tool to target audiences, improve reach, and uncover trends on a mass scale.
+Our team members, **[Bruno Blaszczyk Neves](https://github.com/bbneves)**, **[Frank Bucalo](https://github.com/frankiebones)**, **[Hunter Gierhart](https://github.com/heartgears)**, and **[Tyler Comerford](https://github.com/tylerc108),** have a shared interest in music, with Hunter working at a record label. The rise in popularity of streaming services as a means to consume music has provided a plethora of new, valuable metrics to analyze, for companies, artists, and enthusiasts like us. Analysis on this data can be used as a tool to target audiences, improve reach, and uncover trends on a mass scale.
 
 Our project centers around DSP (digital service provider) playlisting: record labels and artists have a vested interest in obtaining favorable playlisting from Spotify curators - a task that is easier said than done. These playlists drive streams and thus revenue for these parties. By analyzing audio features for songs by playlist, our group hopes to uncover useful trends for copyright owners to utilize when pitching their music for editorial placement. As the largest DSP, Spotify is the most important player in recorded music today. Their API makes more data available to the public than ever before, and is the paramount tool for music related data analysis.
 
@@ -132,6 +132,6 @@ While the neural network model is more robust than linear regression, ultimately
 Another technical limitation of our data is that the popularity score is not static, it is an ever changing metric. A new Harry Styles or Lizzo song may have a '0' popularity score upon release and be input in our data as such, but soar later on. Vice-versa, a song could plummet in popularity after peaking. These considerations are to say that evaluation of our model's accuracy should account for these realities.
 
 ## Dashboard
-Our data will be visualized in an interactive Tableau dashboard that will highlight features on hover.
+Our dataset and model are visualized in an interactive Tableau dashboard.
 
-![Tableau](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/Spotify_Analysis_Dashboard.png)
+![Tableau](https://github.com/bbneves/Spotify_Playlist_Analysis/blob/hunter/Dashbaord_v2.png)
